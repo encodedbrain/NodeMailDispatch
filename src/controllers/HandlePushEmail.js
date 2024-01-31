@@ -27,6 +27,7 @@ module.exports = {
             `,
         });
 
-        console.log("Message sent: %s", info.messageId);
+        
+        res.status(200).send(info.response);
     }
 }
