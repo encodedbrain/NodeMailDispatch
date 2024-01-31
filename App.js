@@ -7,7 +7,7 @@ const cors = require("cors")
 
 app.use(express.json())
 app.use(cors({
-    origin: "http://localhost:5173"
+    origin: "http://localhost:5173/email"
 }))
 app.use(express.urlencoded({ extended: true }))
 app.use(router)
