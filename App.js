@@ -7,11 +7,12 @@ const cors = require("cors")
 
 app.use(express.json())
 
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    next();
-});
-app.use(cors())
+var corsOptions = {
+    origin: 'http://localhost:5173',
+    optionsSuccessStatus: 200,
+    methods: "POST"
+}
+app.use(cors(corsOptions))
 app.use(express.urlencoded({ extended: true }))
 app.use(router)
 
