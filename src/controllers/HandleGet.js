@@ -1,7 +1,7 @@
 module.exports = {
     async HandleGetHelloWorld(req, res) {
 
-        res.send("welcome to my simple api")
+        res.status(200).send("welcome to my simple api")
 
     }
 }
