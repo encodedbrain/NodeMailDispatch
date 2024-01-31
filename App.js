@@ -6,7 +6,12 @@ const router = require("./src/routes/Routes")
 const cors = require("cors")
 
 app.use(express.json())
-app.use(cors())
+
+var corsOptions = {
+    origin: 'http://localhost:5173',
+    optionsSuccessStatus: 200
+}
+app.use(cors(corsOptions))
 app.use(express.urlencoded({ extended: true }))
 app.use(router)
 
